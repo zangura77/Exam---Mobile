@@ -1,0 +1,9 @@
+int countVariants(int stairCount){
+	if(stairCount == 0){
+		return 1;
+	}else if(stairCount < 0){
+		return 0;
+	}
+
+	return countVariants(stairCount - 1) + countVariants(stairCount - 2);
+}
